@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function arguments
+	function hello(a,b) {
+        var c=a+b;
+
+        console.log(c);
+		
+	}
+    hello(10,20)
+	
+	//function overloding
+
+    function foo(arg1) {
+	console.log(arg1);
+}
+foo("geeks");
+/* The above function will be
+overwritten by the function
+below, and the below function
+will be executed for any number
+and any type of arguments */             
+function foo1(arg1, arg2) {          
+	console.log(arg1, arg2);
+}
+
+
+foo1("Geeks");
+
+
+// iifg function
+
+
+
+	// Regular Function.
+	function Greet() {
+		console.log("Welcome to GFG!");
+	};
+	// Execution of Regular Function.
+	Greet();
+
+	// IIFE creation and execution.
+	(function() {
+		console.log("Welcome to GFG!");
+	})
+    
+    ();
+
+
+    
+
+//function factories
+
+
+
+
+// Factory Function creating person
+var Person = function (name, age) {
+
+    // creating person object
+    var person = {};
+
+    // parameters as keys to this object
+    person.name = name;
+    person.age = age;
+
+    // function to greet
+    person.greeting = function () {
+        return (
+            'Hello I am ' + person.name
+                + '. I am ' + person.age
+                + ' years old. '
+        );
+    };
+    return person;
+};
+
+var person1 = Person('Abi', 20);
+console.log(person1.greeting());
+
+var person2 = Person('swetha', 25);
+console.log(person2.greeting());
+
+
+
+
+
+    </script>
+
+</body>
+</html>
